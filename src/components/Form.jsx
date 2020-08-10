@@ -19,6 +19,16 @@ export default function Form() {
   const [ingredients, setIngredients] = useState();
   const [method, setMethod] = useState();
 
+  function addRecipe() {
+    const recipe = {
+      name: name,
+      type: type,
+      ingredients: ingredients,
+      method: method,
+    }
+    // Do something
+  }
+
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <TextField label="Recipe Name" onChange={setName}/>
@@ -29,7 +39,7 @@ export default function Form() {
       <br />
       <TextField label="Method" onChange={setMethod}/>
       <br />
-      <Button variant="contained">Add</Button>
+      <Button variant="contained" onClick={() => addRecipe}>Add</Button>
     </form> 
   );
 }
