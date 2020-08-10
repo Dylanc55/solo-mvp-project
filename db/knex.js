@@ -1,5 +1,6 @@
 const knex = require("knex");
 
+// Application error when trying to deploy to Heroku
 const db = knex({
   client: "pg",
   connection:
