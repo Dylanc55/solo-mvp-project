@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -14,6 +15,7 @@ app.use(express.static(publicPath));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// retrieve recipes endpoint
 app.get("/api/recipes", async (req, res) => {
     try {
       const recipes = await db.select().table("recipes");
