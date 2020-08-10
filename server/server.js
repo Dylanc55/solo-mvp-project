@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const publicPath = path.join(__dirname, "..", "public")
 const db = require("../db/knex");
 
 const PORT = process.env.PORT || 3000;
@@ -10,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 // Serve static assets
-app.use(express.static(publicPath));
+app.use(express.static(path.resolve(__dirname, "..", "build")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,7 +27,7 @@ app.get("/api/recipes", async (req, res) => {
 
 // Always return the main index.html, so react-router render the route in the client
 app.get("*", (req, res) => {
-  res.sendFile(path.join(publicPath, "index.html"));
+  res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
 });
 
 app.listen(PORT, () => {
