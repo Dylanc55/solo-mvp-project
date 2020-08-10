@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Button } from "@material-ui/core";
 import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
@@ -13,16 +14,22 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Form() {
   const classes = useStyles();
+  const [name, setName] = useState();
+  const [type, setType] = useState();
+  const [ingredients, setIngredients] = useState();
+  const [method, setMethod] = useState();
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField label="Recipe Name" />
+      <TextField label="Recipe Name" onChange={setName}/>
       <br />
-      <TextField label="Type of Food" />
+      <TextField label="Type of Food" onChange={setType}/>
       <br />
-      <TextField label="Ingredients" />
+      <TextField label="Ingredients" onChange={setIngredients}/>
       <br />
-      <TextField label="Method" />
+      <TextField label="Method" onChange={setMethod}/>
+      <br />
+      <Button variant="contained">Add</Button>
     </form> 
   );
 }
