@@ -14,9 +14,11 @@ function App() {
       {storeRecipe ? (
         <Form storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe} />
         ) : (
+        <>
         <Display />
+        <FormDelete />
+        </>
       )}
-      <FormDelete />
     </div>
   );
 }
