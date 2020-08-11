@@ -17,14 +17,14 @@ export default function Display() {
     return (
         <div>
            <div>
-               {recipes.map(recipe => (
+               {/* {recipes.map(recipe => (
                    <>
                    <div>{recipe.name}</div>
                    <div>{recipe.type}</div>
                    <div>{recipe.ingredients}</div>
                    <div>{recipe.method}</div>
                    </>
-               ))}
+               ))} */}
            </div>
         </div>
     )
