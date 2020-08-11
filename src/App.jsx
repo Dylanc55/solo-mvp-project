@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">Recipe Book</header>
       <Button variant="contained" onClick={() => setStoreRecipe(!storeRecipe)}>Add Recipe</Button>
       {storeRecipe ? (
-        <Form addRecipe={storeRecipe} setAddRecipe={setStoreRecipe} />
+        <Form storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe} />
         ) : (
         <Display />
       )}
