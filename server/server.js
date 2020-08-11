@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const knex = require("knex");
 const bodyParser = require("body-parser");
 const path = require("path");
 const db = require("./knex");
@@ -12,7 +13,7 @@ const app = express();
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // retrieve recipes endpoint
 app.get("/api/recipes", async (req, res) => {
@@ -24,6 +25,17 @@ app.get("/api/recipes", async (req, res) => {
       res.sendStatus(500);
     }
 });
+
+// add recipe endpoint
+app.post("/api/add", async (req, res) => {
+  try {
+    await knex("recipes").insert(req.body);
+    console.log(req.body);
+  } catch (err) {
+    console.error("Error adding recipe!", err);
+    res.sendStatus(500);
+  }
+})
 
 // Always return the main index.html, so react-router render the route in the client
 app.get("*", (req, res) => {

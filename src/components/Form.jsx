@@ -26,20 +26,25 @@ export default function Form() {
       ingredients: ingredients,
       method: method,
     }
-    // Do something
+    console.log(recipe)
+    fetch('http://localhost:3000/api/add', {
+      method: 'post',
+      body: JSON.stringify(recipe),
+      headers: { 'Content-type': 'application/json' }
+    })
   }
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField label="Recipe Name" onChange={setName}/>
+      <TextField label="Recipe Name" onChange={(e) => setName(e.target.value)}/>
       <br />
-      <TextField label="Type of Food" onChange={setType}/>
+      <TextField label="Type of Food" onChange={(e) => setType(e.target.value)}/>
       <br />
-      <TextField label="Ingredients" onChange={setIngredients}/>
+      <TextField label="Ingredients" onChange={(e) => setIngredients(e.target.value)}/>
       <br />
-      <TextField label="Method" onChange={setMethod}/>
+      <TextField label="Method" onChange={(e) => setMethod(e.target.value)}/>
       <br />
-      <Button variant="contained" onClick={() => addRecipe}>Add</Button>
+      <Button variant="contained" onClick={() => addRecipe()}>Add</Button>
     </form> 
   );
 }
