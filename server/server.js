@@ -36,6 +36,19 @@ app.post("/api/add", async (req, res) => {
   }
 })
 
+// delete recipe endpoint
+app.delete("/api/delete", async (req, res) => {
+  try {
+    await db("recipes")
+      .where(req.body)
+      .del()
+    console.log("Deleted Recipe", req.body);
+  } catch (err) {
+    console.error("Error adding recipe!", err);
+    res.sendStatus(500);
+  }
+})
+
 // Always return the main index.html, so react-router render the route in the client
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));

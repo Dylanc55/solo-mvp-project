@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from "@material-ui/core";
 import './styles/App.css';
 import Form from "./components/Form";
+import FormDelete from "./components/FormDelete";
 import Display from "./components/Display";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         ) : (
         <Display />
       )}
+      <FormDelete />
     </div>
   );
 }
