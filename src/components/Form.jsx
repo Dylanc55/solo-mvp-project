@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Form() {
+export default function Form({ storeRecipe, setStoreRecipe }) {
   const classes = useStyles();
   const [name, setName] = useState();
   const [type, setType] = useState();
@@ -26,6 +26,7 @@ export default function Form() {
       ingredients: ingredients,
       method: method,
     }
+    setStoreRecipe(!storeRecipe);
     console.log("frontend", recipe)
     fetch('http://localhost:3000/api/add', {
       method: 'post',
