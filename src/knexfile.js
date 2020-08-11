@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+console.log("knexfile");
 module.exports = {
   development: {
     client: "pg",

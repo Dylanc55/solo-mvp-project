@@ -26,7 +26,7 @@ export default function Form() {
       ingredients: ingredients,
       method: method,
     }
-    console.log(recipe)
+    console.log("frontend", recipe)
     fetch('http://localhost:3000/api/add', {
       method: 'post',
       body: JSON.stringify(recipe),

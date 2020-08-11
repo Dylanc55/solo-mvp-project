@@ -10,10 +10,20 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 // Serve static assets
-app.use(express.static(path.resolve(__dirname, "..", "build")));
+app.use(express.static(path.resolve(__dirname, "..", "..", "build")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// base endpoint
+app.get("/", async (req, res) => {
+  try {
+    res.json("Recipe Book");
+  } catch (err) {
+    console.error("Error loading base endpoint!", err);
+    res.sendStatus(500);
+  }
+});
 
 // retrieve recipes endpoint
 app.get("/api/recipes", async (req, res) => {
@@ -29,8 +39,8 @@ app.get("/api/recipes", async (req, res) => {
 // add recipe endpoint
 app.post("/api/add", async (req, res) => {
   try {
+    console.log("endpoint", req.body);
     await knex("recipes").insert(req.body);
-    console.log(req.body);
   } catch (err) {
     console.error("Error adding recipe!", err);
     res.sendStatus(500);
@@ -39,7 +49,7 @@ app.post("/api/add", async (req, res) => {
 
 // Always return the main index.html, so react-router render the route in the client
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "..", "..", "build", "index.html"));
 });
 
 app.listen(PORT, () => {
