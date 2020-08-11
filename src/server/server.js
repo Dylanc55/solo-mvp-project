@@ -40,7 +40,11 @@ app.get("/api/recipes", async (req, res) => {
 app.post("/api/add", async (req, res) => {
   try {
     console.log("endpoint", req.body);
-    await knex("recipes").insert(req.body);
+    await db("recipes")
+      .insert(req.body)
+      .then(() => {
+        res.json("The recipe was added!");
+      })
   } catch (err) {
     console.error("Error adding recipe!", err);
     res.sendStatus(500);
