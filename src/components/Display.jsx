@@ -13,7 +13,7 @@ export default function Display() {
         displayRecipes();
     }, [])
 
-    const [recipes, setRecipes] = useState([{name: "", type: "", ingredients: "", method: ""}]);
+    const [recipes, setRecipes] = useState([{id: "", name: "", type: "", ingredients: "", method: ""}]);
 
     return (
         <div className="display-container">
@@ -21,6 +21,8 @@ export default function Display() {
                {recipes.map(recipe => (
                    <>
                    <div className="recipe-heading">Recipe</div>
+                   <div className="recipe-subheading">ID</div>
+                   <div className="recipe-contents">{recipe.id}</div>
                    <div className="recipe-subheading">Name</div>
                    <div className="recipe-contents">{recipe.name}</div>
                    <div className="recipe-subheading">Type</div>
