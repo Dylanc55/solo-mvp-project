@@ -14,11 +14,6 @@ app.use(express.static(path.resolve(__dirname, "..", "..", "build")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// base endpoint
-app.get("/", (req, res) => {
-  res.send("Recipe Book");
-});
-
 // retrieve recipes endpoint
 app.get("/api/recipes", async (req, res) => {
     try {
