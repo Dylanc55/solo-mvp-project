@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "serve": "node src/server/server.js",
+    "serve": "node server/server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "makeMigration": "knex migrate:make",

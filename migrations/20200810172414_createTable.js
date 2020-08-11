@@ -3,13 +3,13 @@ exports.up = function(knex) {
     return knex.schema.createTable("recipes", (table) => {
         table.increments("id");
       
-        table.text("name").notNullabl();
+        table.text("name").notNullable();
     
-        table.text("type").notNullabl();
+        table.text("type").notNullable();
     
-        table.text("ingredients").notNullabl();
+        table.text("ingredients").notNullable();
 
-        table.text("method").notNullabl();
+        table.text("method").notNullable();
       });
     };
     
