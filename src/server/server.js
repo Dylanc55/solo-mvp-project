@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const knex = require("knex");
 const bodyParser = require("body-parser");
 const path = require("path");
 const db = require("./knex");
@@ -16,13 +15,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // base endpoint
-app.get("/", async (req, res) => {
-  try {
-    res.json("Recipe Book");
-  } catch (err) {
-    console.error("Error loading base endpoint!", err);
-    res.sendStatus(500);
-  }
+app.get("/", (req, res) => {
+  res.send("Recipe Book");
 });
 
 // retrieve recipes endpoint
@@ -39,12 +33,8 @@ app.get("/api/recipes", async (req, res) => {
 // add recipe endpoint
 app.post("/api/add", async (req, res) => {
   try {
-    console.log("endpoint", req.body);
-    await db("recipes")
-      .insert(req.body)
-      .then(() => {
-        res.json("The recipe was added!");
-      })
+    await db("recipes").insert(req.body)
+    console.log("Added Recipe", req.body);
   } catch (err) {
     console.error("Error adding recipe!", err);
     res.sendStatus(500);
