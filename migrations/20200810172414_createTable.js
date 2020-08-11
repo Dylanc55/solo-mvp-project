@@ -1,15 +1,15 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable("recipes", (table) => {
-        table.increments("id")
+        table.increments("id");
       
-        table.text("name");
+        table.text("name").notNullabl();
     
-        table.text("type");
+        table.text("type").notNullabl();
     
-        table.text("ingredients");
+        table.text("ingredients").notNullabl();
 
-        table.text("method");
+        table.text("method").notNullabl();
       });
     };
     
