@@ -16,7 +16,16 @@ export default function Display() {
 
     return (
         <div>
-           {console.log("log", recipes)}
+           <div>
+               {recipes.map(recipe => (
+                   <>
+                   <div>{recipe.name}</div>
+                   <div>{recipe.type}</div>
+                   <div>{recipe.ingredients}</div>
+                   <div>{recipe.method}</div>
+                   </>
+               ))}
+           </div>
         </div>
     )
 }
