@@ -36,7 +36,7 @@ export default function Form({ storeRecipe, setStoreRecipe }) {
   }
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
+    <form id="form" className={classes.root} noValidate autoComplete="off">
       <TextField label="Recipe Name" onChange={(e) => setName(e.target.value)}/>
       <br />
       <TextField label="Type of Food" onChange={(e) => setType(e.target.value)}/>
