@@ -12,19 +12,19 @@ export default function Display() {
         displayRecipes();
     }, [])
 
-    const [recipes, setRecipes] = useState();
+    const [recipes, setRecipes] = useState([{name: "", type: "", ingredients: "", method: ""}]);
 
     return (
         <div>
            <div>
-               {/* {recipes.map(recipe => (
+               {recipes.map(recipe => (
                    <>
                    <div>{recipe.name}</div>
                    <div>{recipe.type}</div>
                    <div>{recipe.ingredients}</div>
                    <div>{recipe.method}</div>
                    </>
-               ))} */}
+               ))}
            </div>
         </div>
     )
