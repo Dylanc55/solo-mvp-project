@@ -48,7 +48,7 @@ $ yarn build
 To run the server:
 
 ```bash
-$ yarn serve:
+$ yarn start:
 ```
 
 To run tests (not yet implemented):
@@ -62,7 +62,7 @@ $ yarn test
 To access this application locally using yarn:
 
 ```
-$ yarn start
+$ yarn hack
 ```
 
 In your local browser of choice, open http://localhost:3000/ to open the application.
