@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const knex = require("knex");
 const bodyParser = require("body-parser");
 const path = require("path");
 const db = require("./knex");
@@ -29,7 +28,7 @@ app.get("/api/recipes", async (req, res) => {
 // add recipe endpoint
 app.post("/api/add", async (req, res) => {
   try {
-    await knex("recipes").insert(req.body)
+    await db("recipes").insert(req.body)
     console.log("Added Recipe", req.body);
   } catch (err) {
     console.error("Error adding recipe!", err);
@@ -40,7 +39,7 @@ app.post("/api/add", async (req, res) => {
 // delete recipe endpoint
 app.delete("/api/delete", async (req, res) => {
   try {
-    await knex("recipes")
+    await db("recipes")
       .where(req.body)
       .del()
     console.log("Deleted Recipe", req.body);
