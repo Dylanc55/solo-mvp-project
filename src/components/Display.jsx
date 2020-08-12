@@ -20,8 +20,6 @@ export default function Display() {
            <div className="recipe-container">
                {recipes.map(recipe => (
                    <>
-                   <div className="recipe-subheading">ID</div>
-                   <div className="recipe-contents">{recipe.id}</div>
                    <div className="recipe-subheading">Name</div>
                    <div id="recipe-name" className="recipe-contents">{recipe.name}</div>
                    <div className="recipe-subheading">Type</div>
@@ -30,6 +28,8 @@ export default function Display() {
                    <div className="recipe-contents">{recipe.ingredients}</div>
                    <div className="recipe-subheading">Method</div>
                    <div className="recipe-contents">{recipe.method}</div>
+                   <div className="recipe-subheading">ID</div>
+                   <div className="recipe-contents">{recipe.id}</div>
                    <hr />
                    </>
                ))}
