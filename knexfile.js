@@ -9,6 +9,9 @@ module.exports = {
     migrations: {
       directory: "./migrations",
     },
+    seeds: {
+      directory: "./seeds",
+    },
   },
   staging: {
     client: "pg",
@@ -18,6 +21,9 @@ module.exports = {
     migrations: {
       directory: "./migrations",
     },
+    seeds: {
+      directory: "./seeds",
+    },
   },
   production: {
     client: "pg",
@@ -26,6 +32,9 @@ module.exports = {
       `postgres://localhost/recipe`,
     migrations: {
       directory: "./migrations",
+    },
+    seeds: {
+      directory: "./seeds",
     },
   },
 };
