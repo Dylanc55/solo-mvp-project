@@ -17,9 +17,9 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "hack": "react-scripts start",
     "build": "react-scripts build",
-    "serve": "node server/server.js",
+    "start": "node server/server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "makeMigration": "knex migrate:make",
