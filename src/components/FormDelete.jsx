@@ -26,6 +26,7 @@ export default function FormDelete() {
       body: JSON.stringify(recipe),
       headers: { 'Content-type': 'application/json' }
     })
+    window.location.reload();
   }
 
   return (
