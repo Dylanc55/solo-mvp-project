@@ -8,6 +8,7 @@ export default function Display() {
         let recipes = await getRecipes();
         await recipes;
         setRecipes(recipes);
+        console.log(recipes);
     }
     useEffect(() => {
         displayRecipes();
