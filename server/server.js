@@ -29,7 +29,7 @@ app.get("/api/recipes", async (req, res) => {
 app.post("/api/add", async (req, res) => {
   try {
     await db("recipes").insert(req.body)
-    console.log("Added Recipe", req.body);
+    // console.log("Added Recipe", req.body);
   } catch (err) {
     console.error("Error adding recipe!", err);
     res.sendStatus(500);
@@ -42,7 +42,7 @@ app.delete("/api/delete", async (req, res) => {
     await db("recipes")
       .where(req.body)
       .del()
-    console.log("Deleted Recipe", req.body);
+    // console.log("Deleted Recipe", req.body);
   } catch (err) {
     console.error("Error adding recipe!", err);
     res.sendStatus(500);
