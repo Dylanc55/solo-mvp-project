@@ -21,12 +21,11 @@ export default function FormDelete() {
       id: recipeId 
     }
     console.log("frontend", recipe)
-    fetch('http://localhost:3000/api/delete', {
+    fetch('http://localhost:3000/api/removeRecipe', {
       method: 'delete',
       body: JSON.stringify(recipe),
       headers: { 'Content-type': 'application/json' }
     })
-    window.location.reload();
   }
 
   return (
