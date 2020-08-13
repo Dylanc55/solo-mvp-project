@@ -26,7 +26,7 @@ app.get("/api/recipes", async (req, res) => {
 });
 
 // add recipe endpoint
-app.post("/api/addRecipe", async (req, res) => {
+app.post("/api/addRecipe/:recipe", async (req, res) => {
   try {
     await db("recipes").insert(req.body)
     // console.log("Added Recipe", req.body);
@@ -37,7 +37,7 @@ app.post("/api/addRecipe", async (req, res) => {
 })
 
 // delete recipe endpoint
-app.delete("/api/removeRecipe", async (req, res) => {
+app.delete("/api/removeRecipe/:id", async (req, res) => {
   try {
     await db("recipes")
       .where(req.body)
