@@ -28,7 +28,7 @@ export default function Form({ storeRecipe, setStoreRecipe }) {
     }
     setStoreRecipe(!storeRecipe);
     // console.log("frontend", recipe)
-    fetch('http://localhost:3000/api/addRecipe/:recipe', {
+    fetch('/api/addRecipe/:recipe', {
       method: 'post',
       body: JSON.stringify(recipe),
       headers: { 'Content-type': 'application/json' }

@@ -21,7 +21,7 @@ export default function FormDelete() {
       id: recipeId 
     }
     console.log("frontend", recipe)
-    fetch('http://localhost:3000/api/removeRecipe/:id', {
+    fetch('/api/removeRecipe/:id', {
       method: 'delete',
       body: JSON.stringify(recipe),
       headers: { 'Content-type': 'application/json' }
