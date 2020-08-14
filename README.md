@@ -1,5 +1,7 @@
 # solo-mvp-project
 
+![](./src/img/app-icon.jpeg)
+
 ### Table of contents
 
 - Introduction
