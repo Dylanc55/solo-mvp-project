@@ -1,0 +1,18 @@
+.add-button {
+    background-color: brown;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  .add-button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }

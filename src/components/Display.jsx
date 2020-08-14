@@ -18,18 +18,16 @@ export default function Display() {
     return (
         <div className="display-container">
             {recipes.map(recipe => (
-                <>
                 <div className="recipe-container">
                    <div id="recipe-name" className="recipe-contents">{recipe.name}</div>
                    <div className="recipe-contents">{recipe.type}</div>
-                   <div className="recipe-subheading">Ingredients</div>
+                   <div className="recipe-subheading">ー Ingredients ー</div>
                    <div className="recipe-contents">{recipe.ingredients}</div>
-                   <div className="recipe-subheading">Directions</div>
+                   <div className="recipe-subheading">ー Directions ー</div>
                    <div className="recipe-contents">{recipe.method}</div>
-                   <div className="recipe-subheading">ID</div>
+                   <div className="recipe-subheading">ー id ー</div>
                    <div className="recipe-contents">{recipe.id}</div>
                 </div>
-                </>
             ))}
         </div>
     )

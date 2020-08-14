@@ -1,28 +1,27 @@
 import React, { useState } from 'react';
-import { Button } from "@material-ui/core";
 import './styles/App.css';
 import icon from "./img/app-icon.jpeg";
-import Form from "./components/Form";
-import FormDelete from "./components/FormDelete";
+import FormAdd from "./components/FormAdd";
+import FormRemove from "./components/FormRemove";
 import Display from "./components/Display";
 
 function App() {
-  const [storeRecipe, setStoreRecipe] = useState(false)
+  const [storeRecipe, setStoreRecipe] = useState(false);
   return (
     <div className="App">
       <header className="App-header">
         <img className="icon" src={icon} alt="icon"></img>
       </header>
       {storeRecipe ? (
-        <>
-          <Button variant="contained" onClick={() => setStoreRecipe(!storeRecipe)}>ー Return ー</Button>
-          <Form storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe} />
-        </>
+        <span>
+          <button className="return-button" onClick={() => setStoreRecipe(!storeRecipe)}>ー Return ー</button>
+          <FormAdd storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe} />
+          <FormRemove storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe}/>
+        </span>
         ) : (
-          <>
-          <Button variant="contained" onClick={() => setStoreRecipe(!storeRecipe)}>ー Add Recipe ー</Button>
+        <>
+          <button className="add-remove-button" onClick={() => setStoreRecipe(!storeRecipe)}>ー Add/Remove Recipe ー</button>
           <Display />
-          <FormDelete />
         </>
       )}
     </div>
