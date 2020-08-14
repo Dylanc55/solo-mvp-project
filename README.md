@@ -43,6 +43,12 @@ To run migrations:
 $ yarn migrate
 ```
 
+To seed the initial state of the database:
+
+```bash
+$ yarn seed
+```
+
 To create a full build:
 
 ```bash
@@ -75,3 +81,4 @@ In your local browser of choice, open http://localhost:3000/ to open the applica
 ### Sources
 
 "This was created during my time as a student at Code Chrysalis."
+The app logo was created by Emma Cooper.
