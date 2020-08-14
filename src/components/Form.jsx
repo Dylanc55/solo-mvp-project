@@ -45,7 +45,7 @@ export default function Form({ storeRecipe, setStoreRecipe }) {
       <br />
       <TextField label="Method" onChange={(e) => setMethod(e.target.value)}/>
       <br />
-      <Button variant="contained" onClick={() => addRecipe()}>Add</Button>
+      <Button variant="contained" onClick={() => addRecipe()}>ー Add ー</Button>
     </form> 
   );
 }

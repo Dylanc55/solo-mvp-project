@@ -17,23 +17,20 @@ export default function Display() {
 
     return (
         <div className="display-container">
-           <div className="recipe-container">
-               {recipes.map(recipe => (
-                   <>
-                   <div className="recipe-subheading">Name</div>
+            {recipes.map(recipe => (
+                <>
+                <div className="recipe-container">
                    <div id="recipe-name" className="recipe-contents">{recipe.name}</div>
-                   <div className="recipe-subheading">Type</div>
                    <div className="recipe-contents">{recipe.type}</div>
                    <div className="recipe-subheading">Ingredients</div>
                    <div className="recipe-contents">{recipe.ingredients}</div>
-                   <div className="recipe-subheading">Method</div>
+                   <div className="recipe-subheading">Directions</div>
                    <div className="recipe-contents">{recipe.method}</div>
                    <div className="recipe-subheading">ID</div>
                    <div className="recipe-contents">{recipe.id}</div>
-                   <hr />
-                   </>
-               ))}
-           </div>
+                </div>
+                </>
+            ))}
         </div>
     )
 }

@@ -13,13 +13,16 @@ function App() {
       <header className="App-header">
         <img className="icon" src={icon} alt="icon"></img>
       </header>
-      <Button variant="contained" onClick={() => setStoreRecipe(!storeRecipe)}>Add Recipe</Button>
       {storeRecipe ? (
-        <Form storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe} />
-        ) : (
         <>
-        <Display />
-        <FormDelete />
+          <Button variant="contained" onClick={() => setStoreRecipe(!storeRecipe)}>ー Return ー</Button>
+          <Form storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe} />
+        </>
+        ) : (
+          <>
+          <Button variant="contained" onClick={() => setStoreRecipe(!storeRecipe)}>ー Add Recipe ー</Button>
+          <Display />
+          <FormDelete />
         </>
       )}
     </div>

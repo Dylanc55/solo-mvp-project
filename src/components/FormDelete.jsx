@@ -32,7 +32,7 @@ export default function FormDelete() {
     <form id="form" className={classes.root} noValidate autoComplete="off">
       <TextField label="Recipe ID" onChange={(e) => setRecipeId(e.target.value)}/>
       <br />
-      <Button variant="contained" onClick={() => deleteRecipe()}>Delete</Button>
+      <Button variant="contained" onClick={() => deleteRecipe()}>ー Delete ー</Button>
     </form> 
   );
 }
