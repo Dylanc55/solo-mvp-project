@@ -14,7 +14,7 @@
   align-items: center;
 }
 
-.add-remove-button {
+.home-add-button {
   background-color: brown;
   border: none;
   border-radius: 12px;
@@ -28,7 +28,7 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.add-remove-button:hover {
+.home-add-button:hover {
   background-color: #4CAF50; /* Green */
   color: white;
 }
@@ -45,9 +45,10 @@
   font-size: 12px;
   transition-duration: 0.4s;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 10px;
 }
 
 .return-button:hover {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   color: white;
 }

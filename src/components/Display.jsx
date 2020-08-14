@@ -21,10 +21,16 @@ export default function Display() {
                 <div className="recipe-container">
                    <div id="recipe-name" className="recipe-contents">{recipe.name}</div>
                    <div className="recipe-contents">{recipe.type}</div>
-                   <div className="recipe-subheading">ー Ingredients ー</div>
-                   <div className="recipe-contents">{recipe.ingredients}</div>
-                   <div className="recipe-subheading">ー Directions ー</div>
-                   <div className="recipe-contents">{recipe.method}</div>
+                   <div className="ing-dir">
+                       <div>
+                            <div className="recipe-subheading">ー Ingredients ー</div>
+                            <div className="recipe-contents">{recipe.ingredients}</div>
+                       </div>
+                       <div>
+                            <div className="recipe-subheading">ー Directions ー</div>
+                            <div className="recipe-contents">{recipe.method}</div>
+                       </div>
+                   </div>
                    <div className="recipe-subheading">ー id ー</div>
                    <div className="recipe-contents">{recipe.id}</div>
                 </div>

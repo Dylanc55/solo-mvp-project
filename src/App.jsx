@@ -13,15 +13,15 @@ function App() {
         <img className="icon" src={icon} alt="icon"></img>
       </header>
       {storeRecipe ? (
-        <span>
+        <div>
           <button className="return-button" onClick={() => setStoreRecipe(!storeRecipe)}>ー Return ー</button>
           <FormAdd storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe} />
-          <FormRemove storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe}/>
-        </span>
+        </div>      
         ) : (
-        <>
-          <button className="add-remove-button" onClick={() => setStoreRecipe(!storeRecipe)}>ー Add/Remove Recipe ー</button>
+          <>
+          <button className="home-add-button" onClick={() => setStoreRecipe(!storeRecipe)}>ー Add Recipe ー</button>
           <Display />
+          <FormRemove storeRecipe={storeRecipe} setStoreRecipe={setStoreRecipe}/>
         </>
       )}
     </div>
