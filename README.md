@@ -1,6 +1,6 @@
 # solo-mvp-project
 
-![](./src/img/app-icon.jpeg)
+<img src="./src/img/app-icon.jpeg" width="100">
 
 ### Table of contents
 
