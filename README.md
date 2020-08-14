@@ -1,6 +1,8 @@
 # solo-mvp-project
 
-<img src="./src/img/app-icon.jpeg" width="100">
+<div align="center">
+    <img src="./src/img/app-icon.jpeg" width="400" >
+</div>
 
 ### Table of contents
 
