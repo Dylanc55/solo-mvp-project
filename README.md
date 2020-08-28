@@ -6,10 +6,11 @@
 
 ### Table of contents
 
-- Introduction
-- Technologies
-- Setup
-- Sources
+1. [Introduction](#introduction)
+1. [Technologies](#technologies)
+1. [Prerequisites](#prerequisites)
+1. [Setup](#setup)
+1. [Access](#access)
 
 ### Introduction
 
@@ -63,10 +64,6 @@ $ yarn start:
 
 To run tests (not yet implemented):
 
-```bash
-$ yarn test
-```
-
 ### Access
 
 To access this application locally using yarn:
@@ -76,9 +73,3 @@ $ yarn hack
 ```
 
 In your local browser of choice, open http://localhost:3000/ to open the application.
-
-
-### Sources
-
-"This was created during my time as a student at Code Chrysalis."
-The app logo was created by Emma Cooper.
